@@ -46,3 +46,8 @@ jobs:
           auth_token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           site_id: ${{ secrets.NETLIFY_SITE_ID }}
           dir: ./build  # Changez selon votre dossier de build
+
+      - name: Debug Git status
+        run: |
+          git status
+          git log -1
